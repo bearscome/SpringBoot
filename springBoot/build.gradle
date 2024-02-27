@@ -16,6 +16,11 @@ repositories {
 }
 
 dependencies {
+	//롬복 추가
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	// annotationProcessor: 컴파일 단계에서 프로세스를 동작하는 것을 의미
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
