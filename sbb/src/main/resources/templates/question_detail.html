@@ -7,5 +7,16 @@
 <body>
   <h2 th:text="${question.subject}"></h2>
   <p th:text="${question.content}"></p>
+  <h5 th:text="|${#lists.size(question.answerList)}개의 답변이 있습니다.|"></h5>
+  <ul>
+      <li th:each="answer : ${question.answerList}" th:text ="${answer.content}"></li>
+  </ul>
+
+  <form th:action="@{|/answer/create/${question.id}|}" method="post">
+      <textarea name="content" id="content" rows="15">
+
+      </textarea>
+      <input type="submit" value="답변등록">
+  </form>
 </body>
 </html>
