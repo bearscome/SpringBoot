@@ -22,7 +22,6 @@ class SbbApplicationTests {
 		Question q1 = new Question();
 		q1.setSubject("sbb1");
 		q1.setContent("sbb1");
-		//ㅇㅇ
 		q1.setCreateDate(LocalDateTime.now());
 		this.questionRepository.save(q1);
 
